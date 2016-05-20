@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="co.uk.joelwebster.Car" table="CAR">
+      <meta attribute="class-description">
+         This class contains car details. 
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="manufacturer" column="manufacturer" type="string"/>
+      <property name="model" column="model" type="string"/>
+	  <property name="year" column="year" type="int"/>
+      <property name="registration" column="registration" type="string"/>
+	  <property name="value" column="value" type="double"/>
+      <property name="sold" column="sold" type="boolean"/>
+   </class>
+</hibernate-mapping>

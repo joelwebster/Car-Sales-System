@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="co.uk.joelwebster.Sale" table="SALE">
+      <meta attribute="class-description">
+         This class contains details of all sales made. 
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <component name="car" class="co.uk.joelwebster.Car">
+		<property name="manufacturer" column="carManufacturer" type="string"/>
+		<property name="model" column="carModel" type="string"/>
+		<property name="year" column="carYear" type="int"/>
+		<property name="registration" column="carRegistration" type="string"/>
+	  </component>
+	  <component name="customer" class="co.uk.joelwebster.Customer">
+		<property name="surname" column="customerSurname" type="string"/>
+		<property name="forenames" column="customerForenames" type="string"/>
+	  </component>
+	  <component name="agent" class="co.uk.joelwebster.Agent">
+		<property name="surname" column="agentSurname" type="string"/>
+		<property name="forenames" column="agentForenames" type="string"/>
+	  </component>
+	  <property name="date" column="date" type="date"/>
+      <property name="price" column="price" type="double"/>
+   </class>
+</hibernate-mapping>

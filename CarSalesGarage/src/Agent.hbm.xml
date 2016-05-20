@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="co.uk.joelwebster.Agent" table="AGENT">
+      <meta attribute="class-description">
+         This class contains agent details. 
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="surname" column="surname" type="string"/>
+      <property name="forenames" column="forenames" type="string"/>
+      <property name="address" column="address" type="string"/>
+      <property name="town" column="town" type="string"/>
+      <property name="county" column="county" type="string"/>
+      <property name="postcode" column="postcode" type="string"/>
+      <property name="phone" column="phone" type="string"/>
+      <property name="registrationDate" column="registrationDate" type="date"/>
+	  <property name="role" column="role" type="string"/>
+   </class>
+</hibernate-mapping>
