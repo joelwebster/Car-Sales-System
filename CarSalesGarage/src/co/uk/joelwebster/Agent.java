@@ -25,7 +25,7 @@ public class Agent extends Person {
 	}
 
 	public String toString() {
-		return this.getSurname() + ", " + this.getForenames() + " - " + this.getPostcode() ;
+		return this.getSurname() + ", " + this.getForenames() + " - " + this.getRole();
 	}
 
 }
